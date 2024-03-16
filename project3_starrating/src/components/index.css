@@ -1,0 +1,22 @@
+.active {
+    color: #fff700;
+}
+
+.inactive {
+    color: black;
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    column-gap: 8px;
+    font-size: 50px;
+    color: black;
+
+}
+
+* {
+    background-color: rgb(189, 132, 132);
+}
