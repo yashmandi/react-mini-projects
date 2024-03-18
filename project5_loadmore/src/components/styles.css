@@ -1,0 +1,42 @@
+.load-more-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+    /* Center the grid horizontally */
+}
+
+.product {
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    /* Align items horizontally at the center */
+}
+
+.product img {
+    width: 80px;
+    height: 90px;
+    border-radius: 5px;
+    /* Add border-radius for a fancier look */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
