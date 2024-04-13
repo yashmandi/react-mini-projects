@@ -47,41 +47,44 @@ export default function AddNewBlog() {
   }, [location]);
 
   return (
-    <div className="flex items-center p-8 ">
-      <div className="p-4 border-2 border-gray-500 w-96 rounded-3xl shadow-2xl">
-        <h1 className="text-2xl font-bold ml-5  w-auto ">{isEdit ? "Edit a Blog" : "Add a Blog"}</h1>
-        <div className="p-5 ">
-          <input
-            name="title"
-            className="border-2 border-gray-800 p-2 rounded-2xl w-[300px] shadow-md"
-            placeholder="Enter Blog Title"
-            id="title"
-            type="text"
-            value={formData.title}
-            onChange={(e) =>
-              setFormData({
-                ...formData,
-                title: e.target.value,
-              })
-            }
-          />
-          <div>
-            <textarea
-              name="description"
-              className="border-2 border-gray-800 p-2 mt-3 w-[300px] rounded-2xl shadow-md"
-              placeholder="Enter Blog Description"
-              id="description"
-              value={formData.description}
-              onChange={(event) =>
+    <div className=" justify-center items-center h-screen bg-gray-200">
+
+      <div className="flex items-center p-8  ">
+        <div className="p-4 border-2 border-gray-500 w-96 rounded-3xl shadow-2xl">
+          <h1 className="text-2xl font-bold ml-5  w-auto ">{isEdit ? "Edit a Blog" : "Add a Blog"}</h1>
+          <div className="p-5 ">
+            <input
+              name="title"
+              className="border-2 border-gray-800 p-2 rounded-2xl w-[300px] shadow-md"
+              placeholder="Enter Blog Title"
+              id="title"
+              type="text"
+              value={formData.title}
+              onChange={(e) =>
                 setFormData({
                   ...formData,
-                  description: event.target.value,
+                  title: e.target.value,
                 })
               }
             />
-            <button className="border-2 border-gray-800 p-2 mt-4 w-[100px] rounded-2xl shadow-xl" onClick={handleSaveBlogToDatabase}>
-              {isEdit ? "Edit Blog" : "Add Blog"}
-            </button>
+            <div>
+              <textarea
+                name="description"
+                className="border-2 border-gray-800 p-2 mt-3 w-[300px] rounded-2xl shadow-md"
+                placeholder="Enter Blog Description"
+                id="description"
+                value={formData.description}
+                onChange={(event) =>
+                  setFormData({
+                    ...formData,
+                    description: event.target.value,
+                  })
+                }
+              />
+              <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mt-3 rounded-lg shadow-md transition duration-300 ease-in-out" onClick={handleSaveBlogToDatabase}>
+                {isEdit ? "Edit Blog" : "Add Blog"}
+              </button>
+            </div>
           </div>
         </div>
       </div>

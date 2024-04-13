@@ -45,13 +45,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div >
+    <div className=" justify-center items-center h-screen bg-gray-200">
       <h1 className="text-3xl font-bold p-6">My Blogs</h1>
       {pending ? (
         <h1 className="text-3xl font-bold p-6">Loading Blogs...</h1>
       ) : (
         <div className="p-4 ml-2">
-          <div className="p-2 border-2 border-gray-500 w-96 rounded-3xl shadow-2xl">
+          <div className="p-3 border-2 border-gray-500 w-96 rounded-3xl shadow-2xl">
             {blogList && blogList.length ? (
               blogList.map((blogItem) => (
                 <div key={blogItem._id}>
